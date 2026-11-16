@@ -209,7 +209,7 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-hero__text .s-lead { margin-top: 12px; font-size: 1.02rem; }
   .s-hero__text .s-ticks { margin-top: 16px; gap: 8px; }
   .s-hero__photo { flex: 1 1 0; min-height: 200px; margin: 22px 0 0 !important; position: relative; }
-  .s-hero__photo img { position: absolute; inset: 0; width: 100%; height: 100% !important; aspect-ratio: auto !important; object-fit: cover; object-position: center 55%; }
+  .s-hero__photo img { position: absolute; inset: 0; width: 100%; height: 100% !important; aspect-ratio: auto !important; object-fit: cover; object-position: center 85%; }
   .s-hero__widget { position: static !important; align-self: start; }
 }
 
@@ -232,7 +232,7 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
 /* правка Юли 14.11: главное фото на телефоне не прячем */
 @media (max-width: 860px) {
   .s-hero__photo { display: block !important; margin: 22px 0 0 !important; }
-  .s-hero__photo img { width: 100%; aspect-ratio: 4 / 3 !important; height: auto !important; object-fit: cover; object-position: center 55%; border-radius: var(--r); }
+  .s-hero__photo img { width: 100%; aspect-ratio: 4 / 3 !important; height: auto !important; object-fit: cover; object-position: center 85%; border-radius: var(--r); }
 }
 
 /* правка Юли: без переносов слов в текстах */
@@ -257,3 +257,7 @@ h1, h2, h3, p, li, a, span, b, label, figcaption, blockquote { -webkit-hyphens: 
 
 /* правка 16.11: фото у Столетти горизонтальные – сетка 4:3, чтобы кухня была целиком в кадре */
 .s-mosaic figure, .s-mosaic .m1, .s-mosaic .m2, .s-mosaic .m3, .s-mosaic .m4, .s-mosaic .m5, .s-mosaic .m6 { aspect-ratio: 4 / 3; }
+
+/* правка Юли 16.11: услуги в форме – каждая с новой строки (пк и телефон) */
+.s-widget .s-chips--col { flex-direction: column; flex-wrap: nowrap; }
+.s-widget .s-chips--col .s-chip--row { justify-content: flex-start; }
